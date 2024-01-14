@@ -1,0 +1,17 @@
+.userList{
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+
+}
+.userList li{
+  border: 2px solid black;
+  background-color: lightblue;
+  padding: 10px;
+  width: calc((100% / 4) - 40px);
+}
