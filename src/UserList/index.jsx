@@ -15,7 +15,13 @@ class UserList extends Component {
       ],
     };
   }
-
+  handleDelete = (id) => {
+    
+    const newUsersArr = this.state.usersArr.filter((user) => id !== user.id  )
+    this.setState({usersArr: newUsersArr})
+    console.log(newUsersArr);
+  };
+  
   render() {
     
     
@@ -24,7 +30,8 @@ class UserList extends Component {
         <ul className="userList">
           {this.state.usersArr.map((user) => (
             <li key={user.id}>
-              <UserData  id={user.id} name={user.name} sex={user.gender}/>
+              <UserData  id={user.id} name={user.name} sex={user.gender} handleDelete={this.handleDelete}/>
+              
             </li>
           ))}
         </ul>
